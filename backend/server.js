@@ -13,13 +13,13 @@ import orderRouter from "./routes/orderRoutes.js"
 const app = express()
 const port = 4000
 
-require('dotenv').config();
+
 // middleware
 app.use(express.json())
 // app.use(cors())
 app.use(
     cors({
-    origin:process.env.FRONTEND_URL,
+    origin:'https://foodie-foodie-wheat.vercel.app',
 
 }));
 
