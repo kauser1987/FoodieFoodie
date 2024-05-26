@@ -3,7 +3,7 @@ import cors from "cors"
 import { connectDB } from "./config/db.js"
 import foodRouter from "./routes/foodRoutes.js"
 import userRouter from "./routes/userRoutes.js"
-import 'dotenv/config'
+import dotenv from "dotenv";
 import cartRouter from "./routes/cartRoutes.js"
 import orderRouter from "./routes/orderRoutes.js"
 
@@ -13,7 +13,8 @@ import orderRouter from "./routes/orderRoutes.js"
 const app = express()
 const port = 4000
 
-// ('dotenv').config();
+dotenv.config();
+connectDB();
 // middleware
 app.use(express.json())
 // app.use(cors())
@@ -25,7 +26,6 @@ app.use(
 
 
 // db connection
-connectDB();
 
 // api endpoints
 app.use("/api/user", userRouter)
