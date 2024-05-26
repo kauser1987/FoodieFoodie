@@ -19,7 +19,7 @@ app.use(express.json())
 // app.use(cors())
 app.use(
     cors({
-    origin:'https://foodie-foodie-wheat.vercel.app',
+    origin:process.env.FRONTEND_URL,
 
 }));
 
