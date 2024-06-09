@@ -2,7 +2,6 @@ import { createContext, useEffect, useState } from "react";
 export const StoreContext = createContext(null);
 import axios from 'axios'
 import { toast } from 'react-toastify'
-
 const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     // const url = import.meta.env.VITE_BACKEND_URL;
@@ -18,8 +17,8 @@ const StoreContextProvider = (props) => {
             else{
                 toast.error("Error")
               }
-            }
-            console.log(response.data.data)
+        console.log(response.data.data)
+    }
 
     const loadCartData = async (token) =>{
         const response = await axios.post(url+"/api/cart/get",{},{headers:{token}})
