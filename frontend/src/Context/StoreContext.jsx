@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 export const StoreContext = createContext(null);
 import axios from 'axios'
+import { toast } from 'react-toastify'
 
 const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
@@ -11,7 +12,12 @@ const StoreContextProvider = (props) => {
     const [food_list,setFood_list] = useState([])
     const fetchFoodList = async ()=>{
         const response = await axios.get(`${url}/api/food/list`)
-        setFood_list(response.data.data)
+        if(response.data.success){
+            setFood_list(response.data.data)
+            }
+            else{
+                toast.error("Error")
+              }
         console.log(response.data.data)
     }
 
