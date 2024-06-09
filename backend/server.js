@@ -26,7 +26,7 @@ connectDB();
 // app.use(cors());
 app.use(cors(
     {
-        origin: process.env.FRONTEND_URL,
+        origin: ["https://foodie-foodie-wheat.vercel.app","http://localhost:5174"],
         credentials:true,
     }
 ))
