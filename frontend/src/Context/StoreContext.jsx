@@ -18,8 +18,8 @@ const StoreContextProvider = (props) => {
             else{
                 toast.error("Error")
               }
-        console.log(response.data.data)
-    }
+            }
+            console.log(response.data.data)
 
     const loadCartData = async (token) =>{
         const response = await axios.post(url+"/api/cart/get",{},{headers:{token}})
