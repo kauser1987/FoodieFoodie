@@ -26,7 +26,7 @@ connectDB();
 // app.use(cors());
 app.use(cors(
     {
-        origin: ["https://foodie-foodie-wheat.vercel.app","https://foodie-foodie-edhh.vercel.app/list"],
+        origin: ["https://foodie-foodie-edhh.vercel.app/list"],
         credentials:true,
     }
 ))
