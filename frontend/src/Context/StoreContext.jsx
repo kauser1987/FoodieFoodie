@@ -67,6 +67,7 @@ const StoreContextProvider = (props) => {
             }
         }
         loadData();
+    // },[food_list])
     },[])
 
     const contextValue = {
