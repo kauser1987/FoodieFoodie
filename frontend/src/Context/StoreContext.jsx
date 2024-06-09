@@ -5,7 +5,8 @@ import axios from 'axios'
 const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     // const url = import.meta.env.VITE_BACKEND_URL;
-    const url = "http://localhost:4000";
+    // const url = "http://localhost:4000";
+    const url = "https://foodiefoodie.onrender.com";
     const [token,setToken] = useState("")
     const [food_list,setFood_list] = useState([])
     const fetchFoodList = async ()=>{
